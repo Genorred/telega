@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    .navbar-toggler:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="offcanv">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+          etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample" href="#"><img style="width: 50px" src="images/klee.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+          <div class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-lg-0">
+              <li class="nav-item"><a aria-current="page" class="nav-link" href="#">about</a></li>
+            </ul>
+          </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-right-position">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Telehram</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">IgraGovNya</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 position-relative" id="list-of-ppl">
+          <ul class="list-group" id="list-group">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+          <div class="moving-inv-btn position-absolute" id="moving-inv-btn"></div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          Column
+        </div>
+    </div>
+    <script>
+      const listGroupOfPpls = document.getElementById('list-of-ppl')
+      const movingInvBtn = document.getElementById('moving-inv-btn')
+
+      let objIsDragging
+      let beforeMousePosition
+      let afterMousePosition
+      let currentWidth
+
+      movingInvBtn.addEventListener('mousedown', e => {
+        beforeMousePosition = e.clientX
+        objIsDragging = true
+        currentWidth = listGroupOfPpls.offsetWidth
+      })
+
+      document.addEventListener('mousemove', e =>{
+        if (objIsDragging) {
+        afterMousePosition = e.clientX
+        listGroupOfPpls.style.width = `${currentWidth+afterMousePosition-beforeMousePosition}${'px'}`
+        console.log(beforeMousePosition, afterMousePosition, currentWidth )
+        }
+      })
+
+      document.addEventListener('mouseup', e => {
+        objIsDragging = false
+      })
+
+
+
+
+    </script>
+  </section>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

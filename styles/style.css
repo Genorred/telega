@@ -1,0 +1,43 @@
+
+@media(min-width:992px) {
+    .navbar-nav-right-position {
+   right: 0px;
+   position: absolute;
+}
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        margin-block: 5px ;
+    }
+}
+button:active,
+.navbar-toggler:focus,
+button:focus {
+    outline-style: none ;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}
+button::-moz-focus-inner{
+    border: 0 !important;
+}
+.list-group-item{
+    border: 0px;
+}
+.list-group {
+    height: 100dvh;
+}
+.moving-inv-btn {
+    cursor:w-resize;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 10px;
+    background-color: blue;
+}
+#list-of-ppl {
+    background-color: brown;
+    width: 20vw; 
+}
+.container {
+    margin: 0;
+}
