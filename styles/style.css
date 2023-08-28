@@ -10,6 +10,10 @@
         margin-block: 5px ;
     }
 }
+header{
+    position: relative;
+    z-index: 10;
+}
 button:active,
 .navbar-toggler:focus,
 button:focus {
@@ -24,20 +28,41 @@ button::-moz-focus-inner{
     border: 0px;
 }
 .list-group {
-    height: 100dvh;
+    height: 92.2dvh;
 }
 .moving-inv-btn {
     cursor:w-resize;
     right: 0px;
-    top: 0px;
+    top: -75px;
     bottom: 0px;
     width: 10px;
     background-color: blue;
+    z-index: 9;
 }
 #list-of-ppl {
-    background-color: brown;
+    min-width: 10vw;
+    max-width: 80vw;
     width: 20vw; 
+    margin: 0;
 }
 .container {
     margin: 0;
+}
+.a-person>img {
+    width: 50px;
+}
+.a-person{
+    display: flex;
+}
+.name-and-message>p{
+    display: flex;
+    text-align: left;
+    overflow: hidden;
+    max-height: 20px;
+}
+section {
+    display: flex;
+}
+.chat {
+    margin: auto;
 }

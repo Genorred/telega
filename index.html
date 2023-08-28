@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
   <style>
     .navbar-toggler:focus {
@@ -86,21 +86,19 @@
   </header>
 
   <section>
-    <div class="container text-center">
-        <div class="col-lg-4 col-md-4 col-sm-4 position-relative" id="list-of-ppl">
+        <div class="position-relative" id="list-of-ppl">
           <ul class="list-group" id="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
+            <li class="list-group-item"><div class="a-person"><img src="images/klee.jpg" alt=""><div class="name-and-message"><p>я долбаёб</p><p>ыыы ыыыыы ыыыы ыыыыыыы ыыыыы ыыыыы ыыыыыыы ыыыыыыы ыыыыыыыы ыыыыыы ыыыыыыыы ыыыыыыы ыыыыы ыыыыыыыы ыыыыыыыыыыыы</p></div></div></li>
+            <li class="list-group-item"><div class="a-person"><img src="images/3klee.png" alt=""><div class="name-and-message"><p>я долбаёб</p><p>ыыы ыыыыы ыыыы ыыыыыыы ыыыыы ыыыыы ыыыыыыы ыыыыыыы ыыыыыыыы ыыыыыы ыыыыыыыы ыыыыыыы ыыыыы ыыыыыыыы ыыыыыыыыыыыы</p></div></div></li>
+            <li class="list-group-item"><div class="a-person"><img src="images/klee.jpg" alt=""><div class="name-and-message"><p>я долбаёб</p><p>ыыы ыыыыы ыыыы ыыыыыыы ыыыыы ыыыыы ыыыыыыы ыыыыыыы ыыыыыыыы ыыыыыы ыыыыыыыы ыыыыыыы ыыыыы ыыыыыыыы ыыыыыыыыыыыы</p></div></div></li>
+            <li class="list-group-item"><div class="a-person"><img src="images/klee.jpg" alt=""><div class="name-and-message"><p>я долбаёб</p><p>ыыы ыыыыы ыыыы ыыыыыыы ыыыыы ыыыыы ыыыыыыы ыыыыыыы ыыыыыыыы ыыыыыы ыыыыыыыы ыыыыыыы ыыыыы ыыыыыыыы ыыыыыыыыыыыы</p></div></div></li>
+            <li class="list-group-item"><div class="a-person"><img src="images/3klee.png" alt=""><div class="name-and-message"><p>я долбаёб</p><p>ыыы ыыыыы ыыыы ыыыыыыы ыыыыы ыыыыы ыыыыыыы ыыыыыыы ыыыыыыыы ыыыыыы ыыыыыыыы ыыыыыыы ыыыыы ыыыыыыыы ыыыыыыыыыыыы</p></div></div></li>
           </ul>
           <div class="moving-inv-btn position-absolute" id="moving-inv-btn"></div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-8">
-          Column
+        <div class="chat">
+          ЫЫЫЫ?
         </div>
-    </div>
     <script>
       const listGroupOfPpls = document.getElementById('list-of-ppl')
       const movingInvBtn = document.getElementById('moving-inv-btn')
@@ -120,7 +118,7 @@
         if (objIsDragging) {
         afterMousePosition = e.clientX
         listGroupOfPpls.style.width = `${currentWidth+afterMousePosition-beforeMousePosition}${'px'}`
-        console.log(beforeMousePosition, afterMousePosition, currentWidth )
+        listGroupOfPpls.style.margin = '0px'
         }
       })
 
@@ -133,7 +131,6 @@
 
     </script>
   </section>
-
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
